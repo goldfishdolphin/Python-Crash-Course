@@ -4,6 +4,5 @@ filename = 'Projects/Data-Visualization/chapter_16/mapping_global_data/data/eq_1
 with open(filename) as f:
     all_eq_data = json.load(f)
 
-readable_file = 'Projects/Data-Visualization/chapter_16/mapping_global_data/data/readable_eq_data.json'
-with open(readable_file, 'w') as f:
-    json.dump(all_eq_data, f, indent=4)
+all_eq_dicts = all_eq_data['features']
+print(len(all_eq_dicts))
