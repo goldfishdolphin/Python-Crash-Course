@@ -1,5 +1,5 @@
 import json
-from plotly.graph_objs import Scattergeo, Layout
+from plotly.graph_objs import Layout
 from plotly import offline
 
 filename = 'Projects/Data-Visualization/chapter_16/mapping_global_data/data/eq_1_day_m1.json'
@@ -21,6 +21,9 @@ data = [{
     'type': 'scattergeo',
     'lon': lons,
     'lat': lats,
+    'marker': {
+        'size': [5*mag for mag in mags]
+    }
 }]
 my_layout = Layout(title='Global Earthquakes')
 
